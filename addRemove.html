@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    <button>Create Div</button>
+    <button class="remove">Remove Div</button>
+    <div class="removeDiv"><p>Hey</p>Remove</div>
+    <script>
+        // Add single element
+        $("button").click(function(e){
+            let div = $("<div class='hello'></div>").text("hello");
+            $("body").append(div);
+            //$("body").prepend(div);
+        });
+
+        // Add multiple element
+        $("button").click(function(e){
+            let div = $("<div class='hello'></div>").text("hello");
+            let p = $("<p></p>").text("I am para");
+            $("body").append(div, p);
+            //$("body").prepend(div, p);
+        });
+
+        $(".remove").click(function(e){
+            $(".removeDiv").remove();
+        });
+
+        // Remove Html
+        $(".removeDiv").click(function(e){
+            $("div").empty();
+        });
+    </script>
+</body>
+</html>

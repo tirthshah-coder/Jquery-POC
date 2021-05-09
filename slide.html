@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <button class="slideDown">slideDown</button>
+    <button class="slideUp">slideUp</button>
+    <button class="toggle">toggle</button>
+    <p style="padding: 50px; background-color: blue; width: 400px;">Animation Effects</p>
+
+    <script>
+        $(".slideUp").click(function(e){
+            $("p").slideUp("slow");
+        });
+
+        $(".slideDown").click(function(e){
+            $("p").slideDown(5000);
+        });
+
+        $(".toggle").click(function(e){
+            $("p").slideToggle("fast");
+        })
+    </script>
+</body>
+</html>
